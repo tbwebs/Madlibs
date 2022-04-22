@@ -30,7 +30,10 @@ public class ConnectionManager
 			
 			return connection;
 		}
-		catch(Exception e){}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		
 		return null;
 	}

@@ -28,8 +28,9 @@ public class Driver {
 		
 		int input = sc.nextInt();
 		
+		wordsDAO.combine("", "", "", "");
 		
-		if (input == 1) {
+		/*if (input == 1) {
 			
 			System.out.println("Username: ");
 			String username = sc.next();
@@ -50,7 +51,7 @@ public class Driver {
 			
 			userDAO.addUser(currentUser);
 			
-		}
+		}*/
 		
 		
 	}

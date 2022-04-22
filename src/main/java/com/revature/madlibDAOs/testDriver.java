@@ -10,17 +10,10 @@ public class testDriver
 	
 	public static void main(String[] args) 
 	{
-		ArrayList<String> sto;
-		cm.story = "This is my story";
-		cm.userName = "Disg";
-		cm.noun = "Jouhn";
-		cm.verb = "ate";
-		cm.adj = "red";
-		cm.adverb = "slightly";
+		//wdao.createMadlibs("One day, noun went to the market to verb. Noticing the day was adj, "
+		//		+ "though, the market closed adverb.\r\n");
 		
-		//cdao.addCompletedMadlib(cm);
 		
-		//wdao.createMadlibs("This is a very long adj story");
-		System.out.println(wdao.getStory(1));
+		wdao.combine("David", "eat", "red", "quickly");
 	}
 }

@@ -4,12 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.revature.madlibsInterfaces.WordsInterface;
 
 public class WordsDAO implements WordsInterface
 {
-
+	
 	public void createMadlibs(String nstory) 
 	{
 		try
@@ -62,5 +63,34 @@ public class WordsDAO implements WordsInterface
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public void combine(String noun, String verb, String adj, String Adv)
+	{
+		String sto = getStory(2);
+		ArrayList<String> p = new ArrayList<String>();
+		String part;
+		
+		String[] s = sto.split("noun", 2);
+		p.add(s[0] + noun);
+		part = s[1];
+		
+		s = part.split("verb", 2);
+		p.add(s[0] + verb);
+		part = s[1];
+		
+		s= part.split("adj", 2);
+		p.add(s[0] + adj);
+		part = s[1];
+		
+		s= part.split("adverb", 2);
+		p.add(s[0] + Adv);
+		
+		for(int i = 0;i < p.size();i++)
+		{
+			part += p.get(i);
+		}
+		
+		System.out.println(part);
 	}
 }
