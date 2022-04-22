@@ -23,7 +23,7 @@ public class Driver {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Welcome to Madlibs! Please enter your selection:");
-		System.out.println("1 : log in\n2 : register");
+		System.out.println("1 : Log In\n2 : Register");
 		System.out.print("Input: ");
 		
 		int input = sc.nextInt();
@@ -50,10 +50,13 @@ public class Driver {
 				System.out.println("Enter a Adverb: ");
 				String adverb = sc.next();
 				
-				System.out.println(wordsDAO.getStory(1));
+				String emptyStory = wordsDAO.getStory(1);
 				
 				
 				
+			} else {
+				
+				System.out.println("Looks like you haven't registered. Create a new account?");
 			}
 			
 			
@@ -82,7 +85,7 @@ public class Driver {
 				System.out.println("Enter a Adverb: ");
 				String adverb = sc.next();
 				
-				System.out.println(wordsDAO.getStory(1));
+				String emptyStory = wordsDAO.getStory(1);
 				
 				
 				
