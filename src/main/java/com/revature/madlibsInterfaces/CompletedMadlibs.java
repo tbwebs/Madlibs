@@ -1,9 +1,13 @@
 package com.revature.madlibsInterfaces;
 
+import java.util.ArrayList;
+
+import com.revature.madlibDAOs.CompletedModel;
+
 public interface CompletedMadlibs {
 	
-	void getCompletedMadlib();
+	ArrayList<String> getCompletedMadlib(String user);
 		
-	void addCompletedMadlib(String comp);
+	void addCompletedMadlib(CompletedModel comp);
 
 }

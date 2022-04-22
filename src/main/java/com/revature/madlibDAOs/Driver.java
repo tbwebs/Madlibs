@@ -1,5 +1,6 @@
 package com.revature.madlibDAOs;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
@@ -48,8 +49,5 @@ public class Driver {
 			userDAO.addUser(currentUser);
 			
 		}
-		
-		
-		
 	}
 }
