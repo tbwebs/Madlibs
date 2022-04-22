@@ -1,27 +1,53 @@
 package com.revature.madlibDAOs;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Driver
-{
-	static CompletedDAO cdao = new CompletedDAO();
-	static CompletedModel cm = new CompletedModel();
+public class Driver {
 	
-	public static void main(String[] args) 
-	{
-		ArrayList<String> sto;
-		cm.story = "This is my story";
-		cm.userName = "Disg";
-		cm.noun = "Jouhn";
-		cm.verb = "ate";
-		cm.adj = "red";
-		cm.adverb = "slightly";
+	private static UserModel createUser(String username, String password) {
 		
-		//cdao.addCompletedMadlib(cm);
-		sto = cdao.getCompletedMadlib(cm.userName);
-		for(int i = 0;i < sto.size();i++)
-		{
-			System.out.println(sto.get(i));
+		UserModel user = new UserModel(username, password);
+		
+		return user;
+	}
+	
+	public static void main(String[] args) {
+		
+		//DAO instance
+		UserDAO userDAO = new UserDAO();
+		WordsDAO wordsDAO = new WordsDAO();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Welcome please enter your selection:");
+		System.out.println("1 : log in"
+				+ "2 : register");
+		
+		int input = sc.nextInt();
+		
+		
+		if (input == 1) {
+			
+			System.out.println("Username: ");
+			String username = sc.next();
+			System.out.println("Password: ");
+			String password = sc.next();
+			
+			//Words model will go
+			
+			
+		} else {
+			
+			System.out.println("Create your username : ");
+			String username = sc.next();
+			System.out.println("Create your password : ");
+			String password = sc.next();
+			
+			UserModel currentUser = createUser(username, password);
+			
+			userDAO.addUser(currentUser);
+			
 		}
 	}
 }
