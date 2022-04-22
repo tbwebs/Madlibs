@@ -9,4 +9,9 @@ public class UserModel {
 		this.password = password;
 	}
 
+	@Override
+	public String toString() {
+		return "UserModel [username=" + username + ", password=" + password + "]";
+	}
+
 }

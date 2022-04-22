@@ -4,13 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import javax.management.Query;
-
 import com.revature.madlibsInterfaces.UserInterface;
 
 public class UserDAO implements UserInterface {
 	
-	private Connection conn = ConnectionManager.getConnection();
+	private Connection conn = ConnectionManager.getConnect();
 
 	public void addUser(UserModel newUser) {
 		
