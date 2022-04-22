@@ -1,11 +1,14 @@
 package com.revature.madlibsInterfaces;
 
+import com.revature.madlibDAOs.UserModel;
+
 public interface UserInterface {
 	
-	void createUser(String username, String password);
+	//don't really need this since the table is already created
+//	void createUser(String username, String password);
 	
-	void addUser();
+	void addUser(UserModel newUser);
 	
-	void getuser();
+	void getuser(String username);
 
 }
