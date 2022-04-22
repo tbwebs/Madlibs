@@ -1,13 +1,9 @@
 package com.revature.madlibsInterfaces;
 
-public interface WordsInterface {
+public interface WordsInterface 
+{
+	void createMadlibs(String story);
 	
-	void createMadlibs();
-	
-	void addMadlibs();
-	
-	void getStory();
-	
-	void insertStory();
+	String getStory(int row);
 
 }
