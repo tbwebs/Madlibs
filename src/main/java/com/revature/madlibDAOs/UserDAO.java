@@ -10,7 +10,7 @@ import com.revature.madlibsInterfaces.UserInterface;
 
 public class UserDAO implements UserInterface {
 	
-	private Connection conn = ConnectionManager.getConnection();
+	private Connection conn = ConnectionManager.getConnect();
 
 	public void addUser(UserModel newUser) {
 		
