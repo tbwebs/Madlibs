@@ -2,7 +2,10 @@ package com.revature.madlibDAOs;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 import com.revature.madlibsInterfaces.UserInterface;
 
@@ -39,7 +42,6 @@ public class UserDAO implements UserInterface {
 		
 		try {
 			
-			//sql
 			String query = "SELECT * FROM libusers WHERE user_name = ?";
 			
 			PreparedStatement pstmt = conn.prepareStatement(query);
@@ -53,6 +55,33 @@ public class UserDAO implements UserInterface {
 			e.printStackTrace();
 			
 		}
+	}
+	
+	public ArrayList<UserModel> getAllUsers(){
+		
+		try {
+			
+			Statement stmt = conn.createStatement();
+		
+			ResultSet rs = stmt.executeQuery("SELECT * FROM libusers");
+		
+			ArrayList<UserModel> users = new ArrayList<UserModel>();
+			
+			while (rs.next()) {
+				String username = rs.getString("user_name");
+				String password = rs.getString("npass_word");
+				
+				users.add(new UserModel(username, password));
+				
+			} return users;
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		}
+		return null;
+		
 	}
 
 

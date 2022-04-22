@@ -1,5 +1,7 @@
 package com.revature.madlibsInterfaces;
 
+import java.util.ArrayList;
+
 import com.revature.madlibDAOs.UserModel;
 
 public interface UserInterface {
@@ -10,5 +12,7 @@ public interface UserInterface {
 	void addUser(UserModel newUser);
 	
 	void getuser(String username);
+
+	ArrayList<UserModel> getAllUsers();
 
 }
