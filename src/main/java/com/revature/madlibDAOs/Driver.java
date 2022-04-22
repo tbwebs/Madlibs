@@ -1,6 +1,5 @@
 package com.revature.madlibDAOs;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
@@ -24,35 +23,54 @@ public class Driver {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Welcome to Madlibs! Please enter your selection:");
-		System.out.println("1 : log in\n 2 : register");
+		System.out.println("1 : log in\n2 : register");
+		System.out.print("Input: ");
 		
 		int input = sc.nextInt();
 		
 		wordsDAO.combine("", "", "", "");
 		
-		/*if (input == 1) {
+		if (input == 1) {
 			
-			System.out.println("Username: ");
+			System.out.print("Username: ");
 			String username = sc.next();
-			System.out.println("Password: ");
+			System.out.print("Password: ");
 			String password = sc.next();
 			
-			
+			if (userDAO.getUser(username)) {
+				
+				System.out.println("Enter a Noun: ");
+				String noun = sc.next();
+				
+				System.out.println("Enter a Adjective: ");
+				String adjective = sc.next();
+				
+				System.out.println("Enter a Verb: ");
+				String verb = sc.next();
+				
+				System.out.println("Enter a Adverb: ");
+				String adverb = sc.next();
+				
+				System.out.println(wordsDAO.getStory(1));
+				
+				
+				
+			}
 			
 			
 		} else {
 			
-			System.out.println("Create your username : ");
+			System.out.print("Create your username : ");
 			String username = sc.next();
-			System.out.println("Create your password : ");
+			System.out.print("Create your password : ");
 			String password = sc.next();
 			
 			UserModel currentUser = createUser(username, password);
 			
 			userDAO.addUser(currentUser);
 			
-		}*/
-		
+
+		}
 		
 	}
 }
