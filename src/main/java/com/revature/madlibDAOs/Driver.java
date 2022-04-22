@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
 	
+	//helper
 	private static UserModel createUser(String username, String password) {
 		
 		UserModel user = new UserModel(username, password);
@@ -33,7 +34,6 @@ public class Driver {
 			System.out.println("Password: ");
 			String password = sc.next();
 			
-			//Words model will go
 			
 			
 		} else {
