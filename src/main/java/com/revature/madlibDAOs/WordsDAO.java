@@ -85,6 +85,7 @@ public class WordsDAO implements WordsInterface
 		
 		s= part.split("adverb", 2);
 		p.add(s[0] + Adv);
+		part = "";
 		
 		for(int i = 0;i < p.size();i++)
 		{

@@ -50,8 +50,7 @@ public class Driver {
 				System.out.println("Enter a Adverb: ");
 				String adverb = sc.next();
 				
-				String emptyStory = wordsDAO.getStory(1);
-				
+				wordsDAO.combine(noun, verb, adjective, adverb);
 				
 				
 			} else {
@@ -85,7 +84,7 @@ public class Driver {
 				System.out.println("Enter a Adverb: ");
 				String adverb = sc.next();
 				
-				String emptyStory = wordsDAO.getStory(1);
+				wordsDAO.combine(noun, verb, adjective, adverb);
 				
 				
 				

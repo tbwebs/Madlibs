@@ -48,7 +48,7 @@ public class UserDAO implements UserInterface {
 			
 			pstmt.setString(1, username);
 			
-			ResultSet rs = pstmt.executeQuery(query);
+			ResultSet rs = pstmt.executeQuery();
 		    
 		while (rs.next()) {
 		
