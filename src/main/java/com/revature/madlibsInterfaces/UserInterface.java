@@ -11,7 +11,7 @@ public interface UserInterface {
 	
 	void addUser(UserModel newUser);
 	
-	void getuser(String username);
+	boolean getUser(String username);
 
 	ArrayList<UserModel> getAllUsers();
 

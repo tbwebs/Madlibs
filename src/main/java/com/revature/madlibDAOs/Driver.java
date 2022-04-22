@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
+
 	
 	//helper
 	private static UserModel createUser(String username, String password) {
@@ -18,12 +19,12 @@ public class Driver {
 		//DAO instance
 		UserDAO userDAO = new UserDAO();
 		WordsDAO wordsDAO = new WordsDAO();
+		CompletedDAO completedDAO = new CompletedDAO();
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Welcome please enter your selection:");
-		System.out.println("1 : log in"
-				+ "2 : register");
+		System.out.println("Welcome to Madlibs! Please enter your selection:");
+		System.out.println("1 : log in\n 2 : register");
 		
 		int input = sc.nextInt();
 		
@@ -34,6 +35,7 @@ public class Driver {
 			String username = sc.next();
 			System.out.println("Password: ");
 			String password = sc.next();
+			
 			
 			
 			
@@ -49,5 +51,7 @@ public class Driver {
 			userDAO.addUser(currentUser);
 			
 		}
+		
+		
 	}
 }

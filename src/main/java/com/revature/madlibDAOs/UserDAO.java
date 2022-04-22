@@ -38,23 +38,35 @@ public class UserDAO implements UserInterface {
 		
 	}
 
-	public void getuser(String username) {
+	public boolean getUser(String username) {
 		
 		try {
 			
 			String query = "SELECT * FROM libusers WHERE user_name = ?";
 			
 			PreparedStatement pstmt = conn.prepareStatement(query);
-		
+			
 			pstmt.setString(1, username);
 			
-			pstmt.execute();
+			ResultSet rs = pstmt.executeQuery(query);
+		    
+		while (rs.next()) {
+		
+			String lookupName = rs.getString("user_name");
+			
+			if (lookupName.equals(username)) {
+				
+				return true;
+				
+			} return false;
+			
+		}
 			
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
 			
-		}
+		} return false; 
 	}
 	
 	public ArrayList<UserModel> getAllUsers(){
