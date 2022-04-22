@@ -4,6 +4,6 @@ public interface CompletedMadlibs {
 	
 	void getCompletedMadlib();
 		
-	void addCompletedMadlib();
+	void addCompletedMadlib(String comp);
 
 }
